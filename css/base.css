@@ -1,0 +1,76 @@
+/* base.css 是清除标签默认样式 */
+
+
+/* 把所有的标签内外边距清零 */
+* {
+    margin: 0;
+    padding: 0;
+
+    /* css3盒子模型，防止变形 */
+    box-sizing: border-box;
+}
+
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal;
+}
+
+/* 去掉 li 的小圆点 */
+li {
+    list-style: none;
+}
+
+img {
+    /* border: 0 照顾低版本的浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片低侧有空白缝隙的问题 */
+    vertical-align: middle;
+}
+
+button{
+    /* 设置鼠标移动到按钮时，鼠标的样式为 小手 */
+    cursor: pointer;
+}
+
+a{
+    /* 设置 a 标签 字体颜色 */
+    color: #666;
+    /* 设置  a 标签没有下划线 */
+    text-decoration: none;
+}
+
+button,input{
+     /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    border: 0;
+    /* 点击 input 和 button 边框颜色不变 */
+    outline: none;
+}
+
+body{
+    /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    /* 设置 body 背景颜色 */
+    background-color: #fff;
+    /* 设置 body 字体的大小和样式 */
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 设置 body 字体颜色 */
+    color: #666;
+}
+.hide,
+.none {
+    display: none
+}
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}

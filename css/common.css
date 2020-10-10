@@ -1,0 +1,19 @@
+/* 公共css样式 */
+
+/* 版心 */
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 快捷导航栏模块 */
+.shortcut{
+    height: 31px;
+    background-color: #f1f1f1;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
