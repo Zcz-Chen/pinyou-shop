@@ -3,54 +3,59 @@
 /* 申明字体图标 */
 @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?tomleg');
-    src:  url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?tomleg') format('truetype'),
-      url('../fonts/icomoon.woff?tomleg') format('woff'),
-      url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?tomleg') format('truetype'),
+        url('../fonts/icomoon.woff?tomleg') format('woff'),
+        url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
-  }
+}
 
 /* 版心 */
-.w{
+.w {
     width: 1200px;
     margin: 0 auto;
 }
+
 /* 左浮动 */
-.fl{
+.fl {
     float: left;
 }
+
 /* 右浮动 */
-.fr{
+.fr {
     float: right;
 }
+
 /* 字体颜色为  #c81623 颜色 */
-.style_red{
+.style_red {
     color: #c81623;
 }
+
 /* 快捷导航栏模块 */
-.shortcut{
+.shortcut {
     height: 31px;
     background-color: #f1f1f1;
-    line-height:31px;
+    line-height: 31px;
 }
-.shortcut  ul li{
+
+.shortcut ul li {
     float: left;
 }
 
 
 /* 选择所有偶数的 li 标签 */
 .shortcut .fr ul li:nth-child(even) {
-width: 1px;
-height: 12px;
-background-color: #666;
-margin: 9px 15px 0px;
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    margin: 9px 15px 0px;
 }
 
 /* 使用伪元素 after 生成 字体图标 */
-.fr ul .arrow-icon::after{
+.fr ul .arrow-icon::after {
     content: "\e91e";
     font-family: icomoon;
     margin-left: 6px;
@@ -60,18 +65,20 @@ margin: 9px 15px 0px;
 /* 快捷导航栏模块 结束*/
 
 /* header 头部模块 start */
-.header{
+.header {
     position: relative;
     height: 105px;
-    background-color: pink;
 }
-.logo{
+
+/* logo 图标模块 */
+.logo {
     position: absolute;
     top: 25px;
     width: 171px;
     height: 61px;
 }
-.logo a{
+
+.logo a {
     display: block;
     width: 171px;
     height: 61px;
@@ -81,8 +88,226 @@ margin: 9px 15px 0px;
     /* 隐藏字体 淘宝的做法 */
     text-indent: -9999px;
     overflow: hidden;
-    
 }
+
+/* search 搜索模块 */
+.search {
+    position: absolute;
+    left: 346px;
+    top: 25px;
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191a;
+}
+
+.search input {
+    width: 454px;
+    height: 32px;
+    padding-left: 10px;
+    float: left;
+}
+
+.search button {
+    float: left;
+    width: 80px;
+    height: 32px;
+    background-color: #b1191a;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* hot-words 热门语言模块 */
+.hot-words{
+    position: absolute;
+    top: 66px;
+    left: 346px;
+}
+.hot-words a{
+    margin: 0 10px;
+}
+
+/* shop-car 购物车模块 */
+.shop-car{
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+
+}
+/* 购物车前面的图标 */
+.shop-car::before{
+    content: "\e93a";
+    font-family: "icomoon";
+    margin-right: 5px;
+    color: #b1191a;
+}
+/* 购物车后面的图标 */
+.shop-car::after{
+    content: "\e920";
+    font-family: "icomoon";
+    margin-left: 10px;
+}
+
+/* count 显示添加了多少商品 */
+.shop-car .count{
+    position: absolute;
+    top: -5px;
+    left: 105px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    background-color: #e60012;
+    padding: 0 5px;
+    border-radius: 7px 7px 7px 0;
+}
+
 /* header 头部模块  end*/
 
+/* nav 模块制作 start */
+.nav{
+    height: 47px;
+    border-bottom: 2px solid #b1191a;
+}
+.nav .dropdown{
+float: left;
+width: 210px;
+height: 45px;
+background-color: #b1191a;
+}
+/* 全部商品分类 */
+.dropdown .dt{
+    width: 210px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+/* 商品详细分类 */
+.dropdown .dd{
+    width: 210px;
+    height: 465px;
+    background-color: #c81623;
+    margin-top: 2px;
+    /* display: none; */
+}
+.dropdown .dd ul li{
+    position: relative;
+    height: 31px;
+    line-height: 31px;
+    margin-left: 2px;   
+    padding-left: 10px;
+}
+.dropdown .dd ul li:hover{
+      background-color: #fff;
+}
+.dropdown .dd ul li::after{
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    color: #fff;
+    font-family: "icomoon";
+    content: "\e920";
+    font-size: 14px;
+}
+.dropdown .dd ul li:hover::after{
+    color: #c81623;
+}
+.dropdown .dd ul li a{
+    color: #fff;
+    font-size: 14px;
+}
+.dropdown .dd ul li:hover a{
+    color: #c81623;
+}
+/* nav-item 模块 */
+.nav .nav-items{
+    float: left;
+}
+.nav-items ul li{
+    float: left;
+}
+.nav-items ul li a{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+    padding: 0 25px;
+}
+/* nav 模块制作 end */
 
+/* footer 底部模块的制作 start   */
+.footer{
+    height: 415px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+/* 底部的第一个模块 */
+.footer .mod-service{
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.mod-service ul li{
+    float: left;
+    width: 300px;
+    height: 50px;
+    padding-left: 35px;
+
+}
+.mod-service ul li h5{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    background: url("../images/icons.png") -252px -2px no-repeat;
+    /* background-color: #c81623; */
+    border-radius: 50%;
+}
+ .service-txt h4{
+    font-size: 14px;
+}
+.service-txt p{
+    font-size: 12px;
+}
+
+/* 底部的第二个模块 */
+.mod-help{
+    height: 185px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+.mod-help dl{
+    float: left;
+    width: 200px;
+}
+.mod-help dl dt{
+    font-size: 16px;
+    margin-bottom: 10px;  
+}
+.mod-help dl:last-child{
+    width: 90px;
+    text-align: center;
+}
+/* 底部的第三个模块 */
+.mod-copyright{
+    text-align: center;
+    padding-top: 20px;
+}
+.mod-copyright .links{
+    margin-bottom: 15px;
+}
+.links a{
+    margin: 0 3px;
+}
+.mod-copyright .copyright{
+    line-height: 20px;
+}
+
+/* footer 底部模块的制作 end   */

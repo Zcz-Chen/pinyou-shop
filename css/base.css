@@ -39,10 +39,15 @@ a{
     /* 设置  a 标签没有下划线 */
     text-decoration: none;
 }
+/* 设置所有 a 标签鼠标经过后颜色为#c81623 */
+a:hover {
+    color: #c81623
+}
 
 button,input{
      /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
     font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 去掉默认的灰色边框 */
     border: 0;
     /* 点击 input 和 button 边框颜色不变 */
     outline: none;
